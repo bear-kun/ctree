@@ -51,7 +51,7 @@ static void heap_build(Heap *heap) {
 typedef CTreeKey WeightType;
 
 /*
- * minimize(deep[i] * weight[i])，且数据都在树叶
+ * minimize(sum(deep[i] * weight[i]))，仅树叶
  */
 CTreeNodePtr huffman_code(const WeightType weight[], const int count) {
   if (count == 1) return ctree_new_node_init(weight[0]);

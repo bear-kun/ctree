@@ -80,6 +80,7 @@ CTreeNodePtr ctree_new_node() {
 CTreeNodePtr ctree_new_node_init(const CTreeKey key) {
   const CTreeNodePtr node = ctree_new_node();
   node->key = key;
+  node->height = 0;
   node->left = NULL;
   node->right = NULL;
   return node;

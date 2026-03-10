@@ -46,7 +46,6 @@ typedef struct {
  * minimize(sum(deep[i] * weight[i]))
  */
 
-// 输入data应该升序排列，以满足搜索二叉树的性质
 CTreeNodePtr optimal_bst(const WeightType weight[],const int count) {
   DpData **dp = malloc(count * sizeof(DpData *) +
                        count * (count + 1) / 2 * sizeof(DpData));
